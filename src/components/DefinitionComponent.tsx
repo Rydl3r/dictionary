@@ -28,29 +28,6 @@ const DefinitionComponent = (props: PropTypes) => {
                         </Typography>
                     </Box>
                     : ""}
-                {props.data.sound_urls.length > 0
-                    ? <Box sx={{ my: 1 }}>
-                        <Typography variant="body2" sx={{ fontSize: 14, pt: 1 }} color="text.secondary" gutterBottom>
-                            How it sounds
-                        </Typography>
-                        {props.data.sound_urls.length < 5 ? props.data.sound_urls.map((sound: string) => (
-                            <audio
-                                controls
-                                src={sound}>
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        )) : props.data.sound_urls.splice(0, 5).map((sound: string) => (
-                            <audio
-                                controls
-                                src={sound}>
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        ))}
-                    </Box>
-                    : ""}
-
             </CardContent>
         </Card>
     );
